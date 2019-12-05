@@ -1,0 +1,11 @@
+FROM debian
+
+ENV PYTHONUNBUFFERED=1
+
+### Basic python dev dependencies
+RUN apt-get update && \
+ apt-get upgrade -y && \
+ apt-get install python3-pip curl nano -y && \
+ pip3 install pandas && \
+ pip3 install -i https://test.pypi.org/simple/ lambdata-DS9-KumarV && \
+ python3 -c "import lambdata_mvkumar14; print('Success!')"
