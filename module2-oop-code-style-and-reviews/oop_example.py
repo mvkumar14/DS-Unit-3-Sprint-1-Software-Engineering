@@ -11,8 +11,8 @@ class Game:
     """
     # features or fields inside of a class
     # remember you can set defaults to specific values.
-    def __init__(self,player1="Nicole",player2="Kumar"):
-        self.rounds = 2
+    def __init__(self,rounds=2, player1="Nicole", player2="Kumar"):
+        self.rounds = rounds
         self.steps = 5
         self.player1 = player1
         self.player2 = player2
@@ -44,6 +44,3 @@ class Tic(Game):
 
     def print_players(self):
         print(f'{self.player1}, is playing tic tac toe with {self.player2}')
-
-
-
