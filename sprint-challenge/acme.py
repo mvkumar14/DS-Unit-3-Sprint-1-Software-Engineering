@@ -30,7 +30,7 @@ class Product():
 
 class BoxingGlove(Product):
     def __init__(self, weight=10):
-        # This attribute override isn't the same as what we did in class. 
+        # This attribute override isn't the same as what we did in class.
         # There may be unintended consequences to this that I do not know of.
         self.weight = weight
 
