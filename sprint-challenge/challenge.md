@@ -98,7 +98,7 @@ Make a subclass of `Product` named `BoxingGlove` that does the following:
 - Add a `punch` method that returns "That tickles." if the weight is below 5,
   "Hey that hurt!" if the weight is greater or equal to 5 but less than 15, and
   "OUCH!" otherwise
-  
+
 Example test run:
 
 ```python
@@ -176,7 +176,7 @@ The last lines let you test by running `python acme_report.py`. You should see
 output like:
 
 ```
-$ python acme_report.py 
+$ python acme_report.py
 ACME CORPORATION OFFICIAL INVENTORY REPORT
 Unique product names: 19
 Average price: 56.8
@@ -213,7 +213,7 @@ if __name__ == '__main__':
 
 If you run the tests you should see output like:
 ```
-$ python acme_test.py 
+$ python acme_test.py
 .
 ----------------------------------------------------------------------
 Ran 1 test in 0.000s
@@ -232,7 +232,7 @@ Complete the following:
   length 30, and `test_legal_names` which checks that the generated names for a
   default batch of products are all valid possible names to generate (adjective,
   space, noun, from the lists of possible words)
-  
+
 *Hint* - `test_legal_names` is the trickiest of these, but may not be as bad as
 you think. Check out `assertIn` from `unittest`, and remember that Python is
 pretty handy at string processing. But if you get stuck, move on and revisit.
@@ -262,9 +262,31 @@ career here, you'll have to answer the following:
 - What, in your opinion, is an important part of code reviews? That is, what is
   something you pay attention to when you review code, and that you appreciate
   when others do the same for your code?
+
+Code flow, and adherence to naming convention is what I find most important currently. I appreciate when people find my bugs, or point out cases where my
+code might not work, but I think that those things are less important. I imagine
+you look for those things very intentionally, and often go to seek help for
+bugs and edge cases. A review on the other hand is about your style, and your
+mental models when you code. When somebody points out a mistake in design, or
+thinking that can make you a better programmer. Conventions will make sure that
+your code will fit nicely with other people's code. Code flow, will help you
+organize yourself better when you or someone else navigates your code.
+
+
 - We have an awful lot of computers here, and it gets pretty confusing with
   slightly different things running on all of them. How could containers help us
   improve this situation?
+
+Containers can help us by isolating our environments. Computers have different
+"configurations". Now I'm not exactly certain what all the configurations of a
+computer are. I'm not even sure what kinds of variables are included in
+configurations, but I know that sometimes an error deep down in the environment
+can cause issues in high level code. For example I still don't have the path
+variable for my "default" python set properly, and when I open VScode it doesn't
+run python code properly. This is an implementation detail, that has nothing
+to do with what the code is attempting to do. You can't test the code
+functionality until you figure out the implementation. Containers allow us to
+give others the implementation in addition to the code. This is similar to how a package allows us to give somebody the entire environment (dependencies) so they don't have to install their own dependencies when they run your code.
 
 Answer both of these questions (baseline ~5 sentences) here in text.
 

@@ -2,7 +2,7 @@ from random import randint
 
 
 class Product():
-    def __init__(self, name="test", price=10, weight=20, flammability=0.5):
+    def __init__(self, name, price=10, weight=20, flammability=0.5):
         self.name = name
         self.price = price
         self.weight = weight
@@ -11,22 +11,23 @@ class Product():
 
     def stealability(self):
         ratio = self.price/self.weight
-        if ratio<0.5:
+        if ratio < 0.5:
             return "Not so stealable..."
-        elif ratio<1:
+        elif ratio < 1:
             return "Kinda stealable"
         else:
             return "Very stealable"
 
     def explode(self):
         boom_factor = self.flammability*self.weight
-        if boom_factor<10:
+        if boom_factor < 10:
             return "... fizzle"
-        elif boom_factor>=10:
+        elif boom_factor >= 10:
             return "... boom"
         else:
             return "... BABOOM!!"
         pass
+
 
 class BoxingGlove(Product):
     def __init__(self, weight=10):
@@ -38,9 +39,9 @@ class BoxingGlove(Product):
         return "... it's a glove"
 
     def punch(self):
-        if self.weight<5:
+        if self.weight < 5:
             return "That tickles."
-        elif self.weight<15:
+        elif self.weight < 15:
             return "Hey that hurt!"
         else:
             return "OUCH!"
